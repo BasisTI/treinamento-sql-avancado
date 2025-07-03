@@ -12,6 +12,21 @@ Neste treinamento, utilizaremos o banco de dados _Northwind_ pré-configurado e 
 .MER do banco Northwind
 image::mer-northwind.png[alt=MER do banco, width=500]
 
+
+*Referência Rápida do Esquema do Banco de Dados Northwind*
+
+|====
+| Nome da Tabela | Colunas Relevantes                                             | Descrição                                      
+
+| customers      | `customer_id` (PK), `company_name`, `country`                        | Armazena informações dos clientes.             
+| employees      | `employee_id` (PK), `last_name`, `first_name`, `country`               | Armazena informações dos funcionários.         
+| orders         | `order_id` (PK), `customer_id` (FK), `employee_id` (FK), `order_date`  | Armazena informações do cabeçalho dos pedidos. 
+| order_details  | `order_id` (FK), `product_id` (FK), `unit_price`, `quantity`, `discount` | Armazena os itens de linha para cada pedido.   
+| products       | `product_id` (PK), `product_name`, `category_id` (FK), `unit_price`    | Armazena informações dos produtos.             
+| categories     | `category_id` (PK), `category_name`                                | Armazena as categorias dos produtos.           
+|====
+
+
 == Preparação
 
 *Requisitos*:
