@@ -1,0 +1,46 @@
+= Treinamento SQL Avançado
+:toc:
+:toc-title: Índice
+:toclevels: 4
+:imagesdir: images
+:figure-caption: Figura
+
+== Introdução
+
+Neste treinamento, utilizaremos o banco de dados _Northwind_ pré-configurado e populado. Sua estrutura, que simula um sistema de gerenciamento de pedidos e clientes, nos permitirá enfrentar desafios práticos e entender como CTEs e Window Functions podem otimizar consultas complexas do dia a dia.
+
+.MER do banco Northwind
+image::mer-northwind.png[alt=MER do banco, width=500]
+
+== Preparação
+
+*Requisitos*:
+
+* `docker` 
+* `docker-compose` v2 ou superior
+
+Depois de clonar o repositório, executar o `docker compose`
+
+[source,shell]
+----
+docker compose up -d
+----
+
+Esperar o serviço db ficar com status _healthy_
+
+[source,shell]
+----
+➜ docker compose ps
+SERVICE   CREATED         STATUS                
+db        8 minutes ago   Up 8 minutes (healthy)
+----
+
+== Conexão com o banco de dados
+
+Criar a conexão no DBeaver com os seguintes dados:
+
+* host: `localhost`
+* port: `5432`
+* database: `northwind`
+* username: `northwind`
+* password: `northwind`
